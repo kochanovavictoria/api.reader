@@ -1,0 +1,14 @@
+def download(url, file_name):
+    url = """https://comtrade.un.org/api/get/plus?max=100000&type=C&freq=A&px=HS&ps=2019&r=643&p=0&rg=all%2C2&cc=TOTAL&uitoken=51f8d57316ef76afd66c0074d5b53774&fmt=json
+    """
+    get_r = requests.get(url)
+    r.text
+    r.encoding = 'utf-8'
+    r.json()
+    res_to_json= lambda r: r
+    type(r)
+    # file_name  = url.split("/")[-1]
+    log.info("file_name = %s", file_name)
+    with open(file_name, 'wb') as fd:
+        for chunk in get_r.iter_content(chunk_size=1024):
+                fd.write(chunk)
